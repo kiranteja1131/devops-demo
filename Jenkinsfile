@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Welcome') {
+            steps {
+                echo 'Hello Kiran! Jenkins Pipeline is working.'
+            }
+        }
+    }
+}
