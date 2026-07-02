@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Welcome') {
+
+        stage('Install Dependencies') {
             steps {
-                echo 'Hello Kiran! Jenkins Pipeline is working.'
+                bat 'pip install -r requirements.txt'
             }
         }
     }
