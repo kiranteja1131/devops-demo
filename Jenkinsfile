@@ -7,5 +7,11 @@ pipeline {
                 bat '"C:\\Users\\kiran\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" -m pip install -r requirements.txt'
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                bat 'docker build -t devops-demo .'
+            }
+        }
     }
 }
+    
