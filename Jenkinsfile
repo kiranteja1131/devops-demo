@@ -12,6 +12,11 @@ pipeline {
                 bat 'docker build -t devops-demo .'
             }
         }
+        stage('Tag Docker Image') {
+            steps {
+                bat 'docker tag devops-demo:latest kiran626/devops-demo:latest'
+            }
+        }
     }
 }
     
