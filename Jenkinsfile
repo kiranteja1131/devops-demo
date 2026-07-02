@@ -17,6 +17,11 @@ pipeline {
                 bat 'docker tag devops-demo:latest kiran626/devops-demo:latest'
             }
         }
+        stage('Push Docker Image') {
+            steps {
+                bat 'docker push kiran626/devops-demo:latest'
+            }
+        }
     }
 }
     
